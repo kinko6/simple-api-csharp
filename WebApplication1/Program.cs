@@ -35,10 +35,10 @@ app.MapGet("/ctx/{id}", (int id) => CtxDB.GetCtx(id));
 
 app.MapGet("/ctx", () => CtxDB.GetCtxStatic);
 
-app.MapPost("/animal", (Ctx ctx) => CtxDB.CreateCtx(ctx));
+app.MapPost("/ctx", (Ctx ctx) => CtxDB.CreateCtx(ctx));
 
-app.MapPut("/animal", (Ctx ctx) => CtxDB.UpdateCtx(ctx));
+app.MapPut("/ctx", (Ctx ctx) => CtxDB.UpdateCtx(ctx));
 
-app.MapDelete("/animal", (int id) => CtxDB.DeleteCtx(id));
+app.MapDelete("/ctx", (int id) => CtxDB.DeleteCtx(id));
 
 app.Run();
